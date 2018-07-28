@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Practice using Canvas</title>
+</head>
+<body onload="draw()">
+	<div>
+		<canvas id="canvas" height='1000' width="1000"></canvas>
+	</div>
+</body>
+<script>
+	function draw(){
+		var canvas=document.getElementById('canvas');
+		if(canvas.getContext){
+			var ctx=canvas.getContext('2d');
+			//矩形
+			
+			ctx.fillRect(10,10,100,100);
+			//直线
+			ctx.strokeStyle = "black";
+			ctx.beginPath();
+			ctx.moveTo(10,125);
+			ctx.lineTo(240,125);
+			ctx.stroke();
+			//圆
+			ctx.beginPath();
+			ctx.arc(80,210,80,0,Math.PI*2,true); 
+			ctx.stroke();
+			ctx.beginPath();
+			ctx.arc(250,210,80,0,Math.PI,true);
+			ctx.stroke();
+			ctx.beginPath();
+			ctx.arc(450,210,80,0,Math.PI,false);
+			ctx.stroke();
+			//爱心
+			//三次贝塞尔曲线
+			ctx.fillStyle = "rgb(243,24,51)";
+			 ctx.beginPath();
+			 ctx.moveTo(200,40);
+			 ctx.bezierCurveTo(200,37,195,25,175,25);
+			 ctx.bezierCurveTo(145,25,145,62.5,145,62.5);
+			 ctx.bezierCurveTo(145,80,165,102,200,120);
+			 ctx.bezierCurveTo(235,102,255,80,255,62.5);
+			 ctx.bezierCurveTo(255,62.5,255,25,225,25);
+			 ctx.bezierCurveTo(210,25,200,37,200,40);
+			 ctx.fill();
+			 //文本
+			 ctx.font="48px serif";
+			 ctx.fillStyle="#7B7676"
+			 ctx.fillText("hello world",400,50);
+			 ctx.strokeText("hello world",400,150);
+			 //云
+			 ctx.fillStyle = "rgb(055,456,243,0.5)";
+			 ctx.beginPath();
+			 ctx.moveTo(10,390);
+			 ctx.quadraticCurveTo(10,400,20,400);
+			 ctx.lineTo(150,400);
+			 ctx.quadraticCurveTo(160,400,160,390);
+			 ctx.arc(30,390,20,0,Math.PI,true);
+			 ctx.arc(85,390,35,0,Math.PI,true);
+			 ctx.arc(140,390,20,0,Math.PI,true);
+			 ctx.fill();
+			 
+
+			
+
+		}
+	}
+</script>
+</html>

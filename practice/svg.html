@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Practice using SVG</title>
+	<style>
+		body{height:100%;}
+	</style>
+</head>
+<body>
+<!-- 	<?xml version="1.0" standalone="no"?>
+	<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+	"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> -->
+	<svg width="100%" height="100%" version="1.1"
+	xmlns="http://www.w3.org/2000/svg">
+	<!--fill为填充颜色;stroke:边框颜色;stroke-width:边框宽度;
+	fill-opacity:填充颜色的透明度;stroke-opacity边框颜色的透明度 -->
+	<!-- x y为矩形边距离浏览器左上边的距离，rx,ry定义圆角 -->
+	<rect x="20" y="20" rx="30" ry="30" width="200" height="100"
+	style="fill:blue;stroke:pink;stroke-width:5;
+	fill-opacity:0.3;stroke-opacity:0.9"/> 
+	<!-- cx cy圆心，r为半径 -->
+	<circle cx="300" cy="75" r="40" stroke="#4FD498"
+	stroke-width="2" fill="#E58E6F"/> 
+	<!-- cx cy圆心，rx,ry为xy轴半径 -->
+	<ellipse cx="450" cy="75" rx="100" ry="40"
+	style="fill:red;
+	stroke:#3EE7D8;stroke-width:2"/>
+	<!-- x1,y1为线段起点 x2,y2为线段终点 -->
+	<line x1="0" y1="0" x2="100" y2="10"
+	style="stroke:rgb(99,99,99);stroke-width:1"/>
+    <text x="550" y="100" style="fill:red;">
+      I love SVG
+    </text>
+    <polygon points="700 150, 700 110, 650 110, 695 80, 670 80, 695 40, 685 40, 710 0, 735 40, 725 40, 750 80, 725 80, 770 110, 720 110, 720 150" style="fill:#19D13E"/>
+    <!-- <path d="M700 150 L700 110 L650 110 L695 80 L670 80 L695 40 L685 40 L710 0 L735 40 L725 40 L750 80 L725 80 L770 110 L720 110 L720 150Z " 
+	style="fill:#19D13E"/> -->
+	<path d="M900 35
+	C900 35 920 35 930 50
+	C930 50 920 65 900 70
+	C900 70 910 75 915 100
+	C915 100 905 105 880 80
+	C880 80 865 100 850 80 
+	C850 80 855 70 870 60
+	C870 60 855 50 850 35
+	C850 35 865 30 875 35
+	C875 35 890 15 890 14
+	C890 14 895 20 900 35"
+	style="fill:#F99CCB;stroke:red;stroke-width:2"/>
+	</svg>	
+</body>
+</html>
